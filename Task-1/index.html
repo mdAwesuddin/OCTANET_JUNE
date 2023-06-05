@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url(pexels.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo{
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .menu a{
+            text-decoration: none;
+            color:white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before{
+            content:'';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0%;
+            height:100%;
+            border-bottom:2px solid blue ;
+            transition: 0.4s linear;
+        }
+        .menu a:hover:before{
+            width:90%;
+        }
+        .register a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .register a:hover{
+            background: transparent;
+            border:1px solid blue;
+        }
+        .h-txt{
+           max-width: 650px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           text-align: center;
+           color: white;
+        }
+        .h-txt span{
+            letter-spacing: 5px;
+        }
+        .h-txt h1{
+            font-size: 3.5rem;
+        }
+        .h-txt a{
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+            transition: 0.4s;
+        }
+        .h-txt a:hover{
+            background: transparent;
+            border:1px solid black;
+        }
+        .container{
+            background-color: beige;
+            height:900px;
+            width:100%;
+            display: grid;
+           /* */
+            grid-template-rows:repeat(4,1fr);
+            grid-template-columns:repeat(4,1fr) ;
+            row-gap: 15px;
+            column-gap: 15px;
+            padding: 20px;
+            padding-left: 45px;
+        }
+        .item{
+            background-color: white;
+            height: 400px;
+            width:350px;
+        }
+        .title{
+            text-align: center;
+            font-size: 40px;
+            background: lightgray;
+        }
+        .footer{
+            background-color: black;
+        }
+        .footer .name{
+            color: white;
+            text-align: center;
+        }
+        .footer .myname{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+       <div class="logo">
+         SHOP-PRO
+        </div>
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">Mens</a>
+          <a href="#">Women</a>
+          <a href="#">Kids</a>
+          <a href="#">Electronics</a>
+          <a href="#">Accessories</a>
+        </div>
+        <div class="register">
+          <a href="#">Register</a>
+        </div>
+    </nav>
+    <section class="h-txt">
+        <span>Enjoy</span>
+        <h1>Shopping Experience</h1>
+        <br/>
+        <a href="#">Go And Shop</a>
+    </section>
+    </header>
+    <hr color="white"/>
+    <h3 class="title">Trending Products</h3>
+    <div class="container">
+        <div class="item">
+        <h2 style="text-align: center;">Footware</h2>
+        <hr/>
+        <img style="width: 300px; height: 270px;"src="Nike.jpg" alt="img">
+        <hr/>
+        <h3 style="text-align: center; padding: 4px;">Nike Shoe<br/><span>RS:<s>1200</s><p>Discounted Price RS: 1100</p></span></h3>
+        <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Footware</h2>
+        <hr/>
+        <img style="width: 300px; height: 270px;"src="Reebok.jpg" alt="img">
+        <hr/>
+        <h3 style="text-align: center; padding: 4px;">Reebok Shoe<br/><span>RS:<s>2000</s><p>Discounted Price RS: 1800</p></span></h3>
+        <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Electronics</h2>
+        <hr/>
+        <img style="width: 300px; height: 270px;"src="Sandisk.jpg" alt="img">
+        <hr/>
+        <h3 style="text-align: center; padding: 4px;">SanDisk Pendrive<br/><span>RS:900</span></h3>
+        <br/>
+        <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Kids</h2>
+            <hr/>
+            <img style="width: 300px; height: 270px;"src="Kids Toys.jpg" alt="img">
+            <hr/>
+            <h3 style="text-align: center; padding: 4px;">Kids Toys<br/><span>RS:<s>500</s><p>Discounted Price RS: 449</p></span></h3>
+            <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Mens Wear</h2>
+            <hr/>
+            <img style="width: 300px; height: 270px;"src="Shoppy Brand.jpg" alt="img">
+            <hr/>
+            <h3 style="text-align: center; padding: 4px;">Shoppy Brand T-Shirt<br/><span>RS:<s>800</s><p>Discounted Price RS: 700</p></span></h3>
+            <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Mens Wear</h2>
+            <hr/>
+            <img style="width: 300px; height: 270px;"src="Urban jeans.jpg" alt="img">
+            <hr/>
+            <h3 style="text-align: center; padding: 4px;">Urban jeans<br/><span>RS:<s>999</s><p>Discounted Price RS: 899</p></span></h3>
+            <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Women</h2>
+            <hr/>
+            <img style="width: 300px; height: 270px;"src="Women Dress.jpg" alt="img">
+            <hr/>
+            <h3 style="text-align: center; padding: 4px;">Women by Zudio<br/><span>RS:<s>600</s><p>Discounted Price RS: 649</p></span></h3>
+            <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+        <div class="item">
+            <h2 style="text-align: center;">Electronics</h2>
+            <hr/>
+            <img style="width: 300px; height: 270px;"src="Boat.jpg" alt="img">
+            <hr/>
+            <h3 style="text-align: center; padding: 4px;">Boat Smart Watch<br/><span>RS:2500</span></h3>
+            <br/>
+            <a href="#"style="padding:9px; text-decoration: none; font-size: 20px;">Buy Now</a>
+        </div>
+    </div>
+    <hr color="white"/>
+    <div class="footer">
+        <br/>
+       <p class="name">Copyright &copy; Shoppro.com</p>
+       <br/>
+       <h4 class="myname">Designed And Developed by Awesuddin</h4>
+       <br/>
+    </div>
+</body>
+</html>
